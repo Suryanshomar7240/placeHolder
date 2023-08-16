@@ -9,7 +9,8 @@ const Donation = () => {
   const [data, SetData] = useState({
     name:"",
     type:"Veg",
-    quantity:""
+    quantity:"",
+    category:"Meal"
   });
 
   const [resturant,setresturant]=useState("");
@@ -35,6 +36,7 @@ const Donation = () => {
     });
 
       addDoc(collection(db,"food"), {     
+        category: data.category,
         name: data.name,
         type:data.type,
         quantity:data.quantity,
@@ -68,6 +70,16 @@ const Donation = () => {
                       />
                     </div>
                   </div>
+
+                  <div className="form-row">
+                    <div className="signup-row-title">Category</div>
+                    <select className="signup-value" onChange={handleInputs} name="category" value={data.category}>
+                      <option value="Meal">Meal</option>
+                      <option value="Fruit">Fruit</option>
+                      <option value="Raw product">Raw product</option>
+                    </select>
+                  </div>
+
                   <div className="form-row">
                     <div className="signup-row-title">Food Type</div>
                     <select className="signup-value" onChange={handleInputs} name="type" value={data.type}>
@@ -75,17 +87,19 @@ const Donation = () => {
                       <option value="Non-veg">Non-veg</option>
                     </select>
                   </div>
+
                   <div className="form-row">
-                    <div className="signup-row-title">Food avaible for how many people</div>
+                    <div className="signup-row-title">Food Quantity (# of serves, pieces or weight)</div>
                     <div className="signup-value">
                         <input
                           className="signup-input"
-                          type="number"
+                          type="text"
                           name="quantity"
                           onChange={handleInputs}
                         />
                     </div>
                   </div>
+
                 </form>
               <div className="card-footer">
                 <button
