@@ -8,11 +8,11 @@ const Restaurant = () => {
   // const [food, setfood] = useState([]);
 
   const receivedItems = [
-    { name: 'Apples',type:'veg', quantity: 20, receivedDate: '2022-03-15' },
-    { name: 'Bread',type:'veg', quantity: 10, receivedDate: '2022-03-14' },
-    { name: 'Carrots',type:'veg', quantity: 15, receivedDate: '2022-03-12' },
-    { name: 'Potatoes',type:'veg', quantity: 8, receivedDate: '2022-03-10' },
-    { name: 'Bananas',type:'veg', quantity: 25, receivedDate: '2022-03-08' },
+    { name: 'Apples',type:'veg', quantity: 20, receivedDate: '2022-03-15',status:'active' },
+    { name: 'Bread',type:'veg', quantity: 10, receivedDate: '2022-03-14',status:'taken' },
+    { name: 'Carrots',type:'veg', quantity: 15, receivedDate: '2022-03-12',status:'taken' },
+    { name: 'Potatoes',type:'veg', quantity: 8, receivedDate: '2022-03-10',status:'taken' },
+    { name: 'Bananas',type:'veg', quantity: 25, receivedDate: '2022-03-08',status:'taken' },
   ];
 
 
@@ -37,6 +37,7 @@ const Restaurant = () => {
           <div className="item-type">type</div>
           <div className="item-quantity">Food Quantity</div>
           <div className="item-received-date">Date</div>
+          <div className="item-received-date">Food staus</div>
         </div>
         {receivedItems.map((item, index) => (
           <div key={index} className="list-item">
@@ -44,10 +45,11 @@ const Restaurant = () => {
             <div className="item-type">{item.type}</div>
             <div className="item-quantity">{item.quantity}</div>
             <div className="item-received-date">{item.receivedDate}</div>
+            <div className="item-received-date">{item.status}</div>
           </div>
         ))}
       </div>
-      <Support />
+      {/* <Support /> */}
     </section>
   );
 };

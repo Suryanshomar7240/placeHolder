@@ -6,13 +6,14 @@ import Donation from './donationForm/DonationForm';
 // import Feed from './feed/feed';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Feed from './feed/feed';
+import Home from './home/Home';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Feed />}/>
+        <Route path='/' element={<Home />}/>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/foodbank" element={<FoodBank />} />
