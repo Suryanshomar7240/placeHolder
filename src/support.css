@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap");
 
 * {
   box-sizing: border-box;
@@ -36,7 +36,6 @@ h3 {
   color: #3d7bb4;
   font-family: "Poppins", sans-serif;
   padding-bottom: 10px;
-  /* text decoration underline */
   text-decoration: 3px underline #3d7bb4;
 }
 
@@ -71,8 +70,6 @@ a {
   font-weight: 900;
 }
 
-
-/* mobile media query */
 @media only screen and (max-width: 480px) {
   h3 {
     font-size: 16px;
@@ -102,4 +99,4 @@ a {
   .card p {
     font-size: 3.3vw;
   }
-}
+} */
