@@ -1,8 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+/*   color variables */
+/*   border radius */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .feed-grid{
-    display: flex;
+    /* display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 80vw;
-    margin:auto;
+    margin:auto; */
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 6rem;
+    justify-content: center;
 }
 
 .feed-heading{

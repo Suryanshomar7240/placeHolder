@@ -16,26 +16,71 @@ const Feed=()=>{
       setfood(postData);
     });
   }, []);
+
+
+
     
     return (
-        <section id="feed">
+        <>
             <Navigation />
             <div className='feed-heading'>Available Food</div>
+
+            <div className='feed-heading'>Meals</div>
             <div className='feed-grid'>
-            {food.map((item, index) => (
-              item.status==='active'?
-              <FeedCard
-              id={item.id}
-                key={index}
-                resturantname={item.resturantname}
-                name={item.name}
-                type={item.type}
-                quantity={item.quantity}
-                status={item.status}
-              />:<></>
-            ))}
+                {food.map((item, index) => (
+                  item.status === 'active' && item.category === 'Meal' ?
+                  <FeedCard
+                  id={item.id}
+                    key={index}
+                    img = {item.imageLink}
+                    resturantname={item.resturantname}
+                    name={item.name}
+                    type={item.type}
+                    quantity={item.quantity}
+                    status={item.status}
+                  />:<></>
+                ))}
             </div>
-        </section>
+
+
+            <div className='feed-heading'>Fruits</div>
+            <div className='feed-grid'>
+                {food.map((item, index) => (
+                  item.status === 'active' && item.category === 'Fruit' ?
+                  <FeedCard
+                  id={item.id}
+                    key={index}
+                    img = {item.imageLink}
+                    resturantname={item.resturantname}
+                    name={item.name}
+                    type={item.type}
+                    quantity={item.quantity}
+                    status={item.status}
+                  />:<></>
+                ))}
+            </div>
+
+
+            <div className='feed-heading'>Raw Products</div>
+            <div className='feed-grid'>
+                {food.map((item, index) => (
+                  item.status === 'active' && item.category === 'Raw product' ?
+                  <FeedCard
+                  id={item.id}
+                    key={index}
+                    img = {item.imageLink}
+                    resturantname={item.resturantname}
+                    name={item.name}
+                    type={item.type}
+                    quantity={item.quantity}
+                    status={item.status}
+                  />:<></>
+                ))}
+            </div>
+
+
+            
+        </>
     );
 }
 export default Feed;    

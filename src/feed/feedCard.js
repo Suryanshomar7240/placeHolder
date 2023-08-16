@@ -23,18 +23,19 @@ const FeedCard = (props) => {
         }).then((res)=>window.location="/");
       }
   return (
-    <div className='FeedCard'>
-        <div className='feedcard-data'>
-            <div className='feedcard-resturant'>{props.resturantname}</div>
-            <div className='feedcard-resturant'>{props.name}</div>
-            <div className='feedcard-resturant'>{props.quantity}</div>
+    <div className='card'>
+        <div className='card__body'>
+            <img src={props.img} className="card__image" />
+            {/* <div className='card__title'>{props.resturantname}</div> */}
+            <h2 className='card__title'>{props.name}</h2>
+            <div className='feedcard-resturant'>Quantity: {props.quantity}</div>
             <div className='feedcard-resturant'>{props.type}</div>
         </div>
-            <button className= {`feedcard-button ${props.status}`} type="submit" onClick={()=>handleClick()}>
-                Take food
-            </button>
+        <button className= {`card__btn`} type="submit" onClick={()=>handleClick()}>
+            Take food
+        </button>
     </div>
-  )
+  );
 }
 
 export default FeedCard;
