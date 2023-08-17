@@ -1,6 +1,6 @@
 #donation{
   background: linear-gradient(#00d2ff 0%, #5492cd 100%);
-  width:100vw;
+  /* width:100vw; */
   min-height:100vh;
   margin:0%;
   padding: 0%;
@@ -13,4 +13,7 @@
 .donation-heading{
     font-size: 1.5em;
     margin: 20px;
+}
+.form-row{
+  text-align: left  !important;
 }

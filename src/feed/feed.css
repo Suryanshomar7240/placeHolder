@@ -10,21 +10,16 @@
 }
 
 .feed-grid{
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 80vw;
-    margin:auto; */
-
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
     gap: 6rem;
+    max-width: 80vw;
+    margin: auto;
     justify-content: center;
 }
 
 .feed-heading{
     font-size:3em;
-    margin-left:13vw;
-    margin-top: 3vh;
+    margin:3vh 11vw;
+    text-align: left;
 }

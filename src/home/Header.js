@@ -24,51 +24,34 @@ const Header = () => {
       id="home"
     >
       <div className="sav__header-content">
-        <motion.h1
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            ease: "linear",
-            duration: 0.5,
-            x: { duration: 2 },
-          }}
-          className="gradient__text"
-        >
-          Street Bites Spotlight{" "}
-        </motion.h1>
-        <motion.h1
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            ease: "linear",
-            duration: 0.5,
-            x: { duration: 2 },
-          }}
-          className="gradient__text"
-        >
-          Where Flavor Meets the Map
-        </motion.h1>
+        <h1>Donating one meal can save one life</h1>
         <p>
-          Locate. Savor. Share. Your Guide to Local Food Wonders and Vendor
-          Stories. From Streets to Reels: Discover, Relish, and Amplify Small
-          Food Vendors Everywhere.
+        Millions of people sleep with no food in their belly each day, with our platform we try to feed the hungry with the help of NGOs and your food contributions
         </p>
 
         <div className="sav__header-content__input">
           <div className="sav__header-content__input-div">
-            <Link to="/explore">
-              <button className="sav__header-content__input-ask" type="button">
-                Explore
-              </button>
-            </Link>
+            {console.log("Hi"+localStorage.getItem("type"))}
+          {
+          localStorage.getItem("type") == "Resturant" ? (
+              <Link to="/donation">
+                <button
+                  className="sav__header-content__input-ask"
+                  type="button"
+                >
+                  Donate food
+                </button>
+              </Link>
+            ) : (
+              <Link to="/feed">
+                <button
+                  className="sav__header-content__input-ask"
+                  type="button"
+                >
+                  Take food
+                </button>
+              </Link>
+            )}
           </div>
 
           <a className="see-anchor" href="#features"></a>

@@ -12,7 +12,7 @@ const Feed=()=>{
     getDocs(collection(db,'food')).then((snapshot) => {
       const postData = [];
       snapshot.forEach((doc) => postData.push({ ...doc.data(), id: doc.id }));
-      console.log(postData);
+      // console.log(postData);
       setfood(postData);
     });
   }, []);

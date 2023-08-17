@@ -11,7 +11,7 @@
 
 body {
   font-family: Oxygen, sans-serif;
-  margin: 2rem;
+  /* margin: 2rem; */
 }
 
 
@@ -23,7 +23,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width:15vw;
+  font-size: large;
+  padding-bottom: 20px;
   cursor: pointer;
+  width: 300px;
+  background-color: #e3eeb9;
   transition: transform 200ms ease-in;
 }
 
@@ -40,10 +44,19 @@ body {
   object-fit:cover;
 }
 .card__title {
-  padding: 1rem;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
   text-align: center;
-  margin: 5vh;
+  margin: 5vh 0;
 }
+
+.feedcard-resturant{
+  margin-left: 20px;
+  text-align: left;
+  font-size:20px;
+  margin-bottom: 4px;
+}
+
 .card__description {
   padding: 0 1rem;
 }
@@ -56,7 +69,10 @@ body {
   border: 2px solid #d50000;
   background: transparent;
   color: #d50000;
+  
   border-radius: 0.2rem;
+  margin: 10px auto;
+  
   transition: background 200ms ease-in, color 200ms ease-in;
 }
 .card:hover {

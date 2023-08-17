@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap");
 
 * {
   box-sizing: border-box;
@@ -17,7 +17,7 @@
   color: black;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  background-color: #00d2ff;
+  /* background-color: #00d2ff; */
 }
 
 .support {
@@ -50,16 +50,16 @@ h3 {
   height: 100%;
 }
 
-.card {
+.card1 {
   width: 20vw;
-  height: 20vh;
+  /* height: 20vh; */
   margin: 10px;
   padding-right: 80px;
   background-color: white;
   padding-top: 20px;
 }
 
-.card:nth-child(1) {
+.card1:nth-child(1) {
   width: 40vw;
   padding-right: 10px;
 }
@@ -80,23 +80,23 @@ a {
   .footer {
     font-size: 12px;
   }
-  .card {
+  .card1 {
     width: 100vw;
     margin: 0px;
     height: auto;
     padding: 20px;
     padding-bottom: 0;
   }
-  .card:nth-child(1) {
+  .card1:nth-child(1) {
     width: 100vw;
   }
-  .card:nth-child(3) {
+  .card1:nth-child(3) {
     padding-bottom: 20px;
   }
-  .card > h2 {
+  .card1 > h2 {
     font-size: 18px;
   }
-  .card p {
+  .card1 p {
     font-size: 3.3vw;
   }
-} */
+}

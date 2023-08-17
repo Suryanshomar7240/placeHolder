@@ -18,7 +18,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/foodbank" element={<FoodBank />} />
         <Route path="/donation" element={<Donation />} />
-        <Route path="/resturant" element={<Restaurant />} />
+        <Route path="/restaurant" element={<Restaurant />} />
         <Route path='/feed' element={<Feed />}/>
       </Routes>
     </BrowserRouter>
